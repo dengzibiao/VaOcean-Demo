@@ -1,25 +1,14 @@
-
+// Copyright 2014-2018 Vladimir Alyamkin. All Rights Reserved.
 
 using UnrealBuildTool;
 using System.Collections.Generic;
 
 public class VaOceanDemoEditorTarget : TargetRules
 {
-	public VaOceanDemoEditorTarget(TargetInfo Target)
+	public VaOceanDemoEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-	}
 
-	//
-	// TargetRules interface.
-	//
-
-	public override void SetupBinaries(
-		TargetInfo Target,
-		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
-		ref List<string> OutExtraModuleNames
-		)
-	{
-		OutExtraModuleNames.AddRange( new string[] { "VaOceanDemo" } );
+		ExtraModuleNames.AddRange( new string[] { "VaOceanDemo" } );
 	}
 }
